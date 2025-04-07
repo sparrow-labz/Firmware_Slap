@@ -60,7 +60,7 @@ def main():
                         action="store_true")
     parser.add_argument("--use_radare2",
                         dest="use_ghidra",
-                        default=True,
+                        default=False,
                         action="store_false",
                         help="Use radare2 instead of ghidra for analysis")
     parser.add_argument("--function_timeout", "-ft",

@@ -10,12 +10,12 @@ drop_list = ["ParentNamespace", "Tags", "StackFrame", "Class",
         "__hash__",  "__unicode__", "hashCode", "__repr__", "ID",
         "FunctionThunkAddresses"]
 
-param_attrs = ['name', 'size', 'slot', 'storage', 'length', 'memoryVariable',
+param_attrs = ['name', 'size', 'storage', 'length', 'memoryVariable',
         'ordinal', 'register', 'registerVariable', 'registers', 'stackOffset', 
         'stackVariable', 'firstUseOffset', 'forcedIndirect', 'formalDataType', 
         'dataType', 'variableStorage']
 
-hiparam_attr = ['name', 'size', 'slot', 'storage', 'dataType']
+hiparam_attr = ['name', 'size', 'storage', 'dataType']
 
 var_attrs = ['name', 'dataType', 'firstUseOffset', 'registerVariable', 'length',
         'source', 'stackOffset', 'stackVariable', 'uniqueVariable',  'valid',

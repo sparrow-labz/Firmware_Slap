@@ -78,8 +78,8 @@ def get_function_information(file_name):
                        full_output_path)
 
     print(full_output_path)
-    if os.path.exists(full_output_path):
-        functions = load_functions_from_file(full_output_path)
+    if os.path.exists("/home/sparrow/Firmware_Slap"):
+        functions = load_functions_from_file("/home/sparrow/Firmware_Slap/firmware_slap/ghidra_scripts/Project_upload.cgi")
     else:
         print(
             "Failed to get function information for file {}".format(file_name))

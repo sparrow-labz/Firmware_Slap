@@ -34,7 +34,44 @@ workon fwslap
 
 
 ```bash
+
+change for python3.10 with ubuntu 20.04 setup.py
+
+          "tqdm",
+          "python-magic",
+          "matplotlib",
+          "r2pipe",
+          "psutil",
+          "termcolor",
+          "celery",
+          "flower",
+          "elasticsearch==7.8.0",
+          "numpy==1.26.4",
+          "scikit-learn",
+          "ipython==7.19.0",
+          "angr==8.20.7.6",
+          "capstone==5.0.6"
+          
+and add these for requirements 
+
+tqdm
+python-magic
+IPython
+tqdm
+scikit-learn
+matplotlib
+r2pipe
+matplotlib
+angr
+psutil
+termcolor
+celery
+flower
+numpy
+
 python setup.py install
+
+
 ```
 
 You will need rabbitmq, docker, and (radare2 or Ghidra)
@@ -45,6 +82,10 @@ sudo apt install rabbitmq-server docker.io
 brew install rabbitmq
 
 # Radare2
+
+radare2-79effabdf5db431e40ea2aafc7f322ca32edb876 
+use above radare version 
+
 git clone https://github.com/radare/radare2.git
 sudo ./radare2/sys/install.sh
 # Ghidra

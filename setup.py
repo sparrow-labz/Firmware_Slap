@@ -15,15 +15,17 @@ setup(name='Firmware_Slap',
       install_requires=[
           "tqdm",
           "python-magic",
-          "IPython",
-          "sklearn",
           "matplotlib",
           "r2pipe",
-          "angr",
           "psutil",
           "termcolor",
           "celery",
           "flower",
-          "elasticsearch"
+          "elasticsearch==7.8.0",
+          "numpy==1.26.4",
+          "scikit-learn",
+          "ipython==7.19.0",
+          "angr==8.20.7.6",
+          "capstone==5.0.6"
           ],
      )

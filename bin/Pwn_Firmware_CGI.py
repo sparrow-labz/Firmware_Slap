@@ -21,7 +21,7 @@ for log in log_things:
     logger.disabled = True
     logger.propagate = False
 
-use_ghidra = True
+use_ghidra = False
 use_elastic = False
 es = None
 binwalk_cmd = "binwalk -Mre {}"

@@ -2,7 +2,7 @@ tqdm
 python-magic
 IPython
 tqdm
-sklearn
+scikit-learn
 matplotlib
 r2pipe
 matplotlib
@@ -11,3 +11,4 @@ psutil
 termcolor
 celery
 flower
+numpy

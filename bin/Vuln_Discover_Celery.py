@@ -21,7 +21,7 @@ for log in log_things:
     logger.disabled = True
     logger.propagate = False
 
-use_ghidra = False 
+use_ghidra = False
 use_elastic = False
 es = None
 fh = None
