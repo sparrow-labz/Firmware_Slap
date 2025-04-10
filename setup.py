@@ -26,6 +26,7 @@ setup(name='Firmware_Slap',
           "scikit-learn",
           "ipython==7.19.0",
           "angr==8.20.7.6",
+          "unicorn==1.0.2rc4",
           "capstone==5.0.6"
           ],
      )

@@ -43,9 +43,9 @@ def run_dump_functions(dirpath, base_name, file_name, script_path,
                        output_file_path):
     
     # run from root project dir 
-    
-    ghidra_scripts_dir = $PWD + "firmware_slap/ghidra_scripts/"
-    script_path = $PWD + "firmware_slap/ghidra_scripts/"
+    current_directory = os.getcwd()
+    ghidra_scripts_dir = current_directory + "firmware_slap/ghidra_scripts/"
+    script_path = current_directory + "firmware_slap/ghidra_scripts/"
 
     set_options = os.path.join(ghidra_scripts_dir, "SetDecompilerOptions.py")
     dump_funcs = os.path.join(ghidra_scripts_dir, "DumpFunctions.py")
