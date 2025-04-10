@@ -12,6 +12,8 @@ Firmware slap should be run in a virtual environment. It has been tested on Pyth
 ```bash
 sudo apt install python3-virtualenv
 virtualenv -p python3 fwslap
+# use this one with python3.10
+python3.10 -m venv "fwslap"
 source fwslap/bin/activate
 ```
 -- or --
@@ -81,7 +83,7 @@ sudo apt install rabbitmq-server docker.io
 # OSX
 brew install rabbitmq
 
-# Radare2
+# Radare2 use version 5.5.2
 
 radare2-79effabdf5db431e40ea2aafc7f322ca32edb876 
 use above radare version 
@@ -92,6 +94,10 @@ sudo ./radare2/sys/install.sh
 wget https://ghidra-sre.org/ghidra_9.0.4_PUBLIC_20190516.zip
 unzip ghidra_9.0.4_PUBLIC_20190516.zip -d ghidra
 echo "export PATH=\$PATH:$PWD/ghidra/ghidra_9.0.4/support" >> ~/.bashrc
+
+# if you want to use radare2
+
+search ghidra = True and set to false, except in print_function
 ```
 
 Ghidra requires JDK 11.

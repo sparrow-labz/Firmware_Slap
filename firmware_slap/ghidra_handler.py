@@ -41,6 +41,11 @@ def get_scripts_directory():
 
 def run_dump_functions(dirpath, base_name, file_name, script_path,
                        output_file_path):
+    
+    # run from root project dir 
+    
+    ghidra_scripts_dir = $PWD + "firmware_slap/ghidra_scripts/"
+    script_path = $PWD + "firmware_slap/ghidra_scripts/"
 
     set_options = os.path.join(ghidra_scripts_dir, "SetDecompilerOptions.py")
     dump_funcs = os.path.join(ghidra_scripts_dir, "DumpFunctions.py")
@@ -68,7 +73,9 @@ def get_function_information(file_name):
         return []
 
     functions = []
+    # dirpath = "func"
     dirpath = tempfile.mkdtemp()
+
     base_name = os.path.basename(file_name)
     full_output_path = os.path.join(dirpath, base_name)
 
@@ -78,8 +85,8 @@ def get_function_information(file_name):
                        full_output_path)
 
     print(full_output_path)
-    if os.path.exists("/home/sparrow/Firmware_Slap"):
-        functions = load_functions_from_file("/home/sparrow/Firmware_Slap/firmware_slap/ghidra_scripts/Project_upload.cgi")
+    if os.path.exists(full_output_path):
+        functions = load_functions_from_file(full_output_path)
     else:
         print(
             "Failed to get function information for file {}".format(file_name))
@@ -136,4 +143,3 @@ def get_arg_funcs(file_name, useHiFunc=True):
             x for x in get_function_information(file_name)
             if len(x) > 0 and x['ParameterCount'] > 0
         ]
-
